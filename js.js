@@ -4,13 +4,25 @@ btn = document.querySelector('#btn'),
 btnNext = document.querySelector('#btnNext');
 bool = true,
 i = 0;
-// document.addEventListener('DOMContentLoaded', ()=>
-// {
-   
-//     video.play();
-// })
-// btn.addEventListener("click",()=>{
 
+    // toggleFullScreen();
+    
+function toggleFullScreen() {
+    let video = document.querySelector('#okno');
+    if (!document.mozFullScreen && !document.webkitFullScreen) {
+      if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else {
+        video.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+      }
+    } else {
+      if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else {
+        document.webkitCancelFullScreen();
+      }
+    }
+  }
 // if(bool){
 //         video.play();
 //         bool = false;
@@ -43,6 +55,7 @@ function creatVideo(src){
 }
 function proсess(){
     creatVideo(arrayVideo[i]);
+    toggleFullScreen()
     deleteVideo();
     
 }
@@ -69,4 +82,8 @@ function deleteVideo(){
         
 }) 
 }
+
+// админ панель
+
+
 
