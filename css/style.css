@@ -50,7 +50,7 @@ form{
          text-align: justify;
 }
 form[name = 'add']{
-         display: none;
+         padding: 20px;
 }
 .save_form{
          border: 1px solid #454;
@@ -84,4 +84,10 @@ form[name = 'add']{
 }
 .save_form:last-child{
          margin-bottom: 20px;   
+}
+a{
+         color: #940;
+}
+#link{
+         color: rgba(107, 201, 104, 0.726);
 }

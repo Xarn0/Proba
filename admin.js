@@ -57,28 +57,28 @@ let array = [];
                                         console.log(document.querySelectorAll('.save_form').length)
                                         for(let i = 1; i < document.querySelectorAll('.save_form').length+1;i++)
                                         {
-                                           document.forms[i] .addEventListener('submit',(e)=>
-                                           {
-                                               e.preventDefault();
-                                    //         let xhr = new XMLHttpRequest();
-                                    //         xhr.open("POST","save.php");
-                                    //         xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-                                    //         xhr.onreadystatechange = function ()
-                                    //                 {
-                                    //                         if(this.readyState === 4 && this.status == 200)
-                                    //                         {
-                                    //                                     let array_data =[];
-                                    //                                     array_data.push(this.responseText);
+                                    //        document.forms[i] .addEventListener('submit',(e)=>
+                                    //        {
+                                    //            e.preventDefault();
+                                    // //         let xhr = new XMLHttpRequest();
+                                    // //         xhr.open("POST","save.php");
+                                    // //         xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+                                    // //         xhr.onreadystatechange = function ()
+                                    // //                 {
+                                    // //                         if(this.readyState === 4 && this.status == 200)
+                                    // //                         {
+                                    // //                                     let array_data =[];
+                                    // //                                     array_data.push(this.responseText);
                                                                     
-                                    //                         }
+                                    // //                         }
                                                            
-                                    //                 }
+                                    // //                 }
                                             
-                                    // xhr.send('Name=34' );
+                                    // // xhr.send('Name=34' );
                                                     
 
 
-                                            })
+                                    //         })
                                         }
                                     // 
                                 }
@@ -87,6 +87,7 @@ let array = [];
                                         btnForm = document.createElement("button");
                                         btnForm.innerHTML = 'обновить';
                                         btnForm.className = 'btnForm';
+                                        btnForm.setAttribute('name','buttonSave')
                                         form.append(btnForm );
                                         
                                     function o ()
@@ -131,5 +132,8 @@ let array = [];
                                 // btn_check[0].style.display = "none"
                                
                             })
+
+
+
                             
                             // console.log(array)

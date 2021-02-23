@@ -20,6 +20,7 @@
                   </ul>
                   <table >
                            <thead >
+                              
                                     <th>Выбор</th>
                                     <th>Статус</th>
                                     <th>Имя файла</th>
@@ -55,9 +56,9 @@
                                     echo "
                                     
                                     <td> <input type='text' name='nameVideo${i}'  value = $row->Video > </td>
-                                    <td><input type='text'  name='timeVideo${i}' value = $row->Время> </td>
+                                    <td><input type='text'  name='timeVideo${i}'readonly  value = $row->Время> </td>
                                     <td><input type='text'  name='commVideo${i}' value =$row->Описание></td>
-                                    <td><input type='text'  name='idVideo${i}' value =$row->id></td>
+                                    <td><input type='text'  name='idVideo${i}' readonly value =$row->id></td>
                                    
                                     </tr>";
                                     }
@@ -66,9 +67,9 @@
                            
                   </table>
          </div>
-         <form name="add">
-                 <label >Файл: <input type="file" placeholder="3"></label><br>
-                  <label >Комментарий: <textarea type="text"></textarea></label><br>
+         <form  action="add.php" method="POST" name="add" enctype="multipart/form-data">
+                 <label >Файл: <input type="file" id="filesId" name="addFiles"></label><br>
+                  <label >Комментарий: <textarea required minlength="8" name="comment"></textarea></label><br>
                   <label ><input type="submit"></label>
                   
          </form>

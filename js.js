@@ -40,21 +40,23 @@ arrayVideo.push('./scr/proba.mp4');
 arrayVideo.push('./scr/proba2.mp4');
 arrayVideo.push('./scr/proba3.mp4');
 
-console.log(arrayVideo); 
+
 
 function creatVideo(src){
     let box = document.createElement('video');
     box.setAttribute('src', src);
+    
     box.setAttribute('id', 'okno');
     box.setAttribute('controls', 'controls');
     box.setAttribute('preload', 'auto');
     box.setAttribute('muted', 'muted');
     box.setAttribute('autoplay', 'auto');
     document.querySelector('#Vid').append(box);
-    // box.play();
+   
 }
 function proсess(){
     creatVideo(arrayVideo[i]);
+    
     toggleFullScreen()
     deleteVideo();
     
@@ -67,6 +69,7 @@ if(i > ((arrayVideo.length) - 1)){
 }
 function deleteVideo(){
    let video = document.querySelector('#okno');
+   
         video.addEventListener("ended", function (){
         video.remove();
         
